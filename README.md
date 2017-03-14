@@ -2,6 +2,6 @@
 #Herramientas usadas
 - [x] Nodejs
 - [x] bower
-- [x] angularJS 1.2
+- [x] angularJS
 - [x] bootstrap
 - [x] books-schema.json
