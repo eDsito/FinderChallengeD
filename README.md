@@ -1,7 +1,7 @@
 # FinderChallengeD
 #Herramientas usadas
-Nodejs
-bower
-angularJS 1.2
-bootstrap
-books-schema.json
+- [x] Nodejs
+- [x] bower
+- [x] angularJS 1.2
+- [x] bootstrap
+- [x] books-schema.json
