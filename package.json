@@ -1,0 +1,23 @@
+{
+  "name": "FinderChallengeD",
+  "version": "1.0.0",
+  "description": "mini aplicacion con books-shema",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eDsito/FinderChallengeD.git"
+  },
+  "author": "Edward castillo Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eDsito/FinderChallengeD/issues"
+  },
+  "homepage": "https://github.com/eDsito/FinderChallengeD"
+}

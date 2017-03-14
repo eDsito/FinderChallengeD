@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="finderChanApp">
+	<head>
+		<title>FindChagelle</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content"width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link href="css/offcanvas.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/models.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body  ng-controller="mainController">
+		<div id="main">
+			<nav class="navbar navbar-fixed-top navbar-default">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Finder Challenge</a>
+					</div>
+					<div id="navbar" class="collapse navbar-collapse">
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control" ng-model="q"  placeholder="">
+							</div>
+							<button type="submit" class="btn btn-default" ng-click="filtrar('q')">Buscar</button>
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="#contact">Contactar <span class="sr-only">(current)</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="container">
+				<div class="row row-offcanvas row-offcanvas-right">
+					<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+			          	<div class="list-group" >
+		           	 		<a href="#" class="list-group-item active">Busquedas guardadas</a>
+			           	 	<a href="index.html" class="list-group-item">Todos</a>
+			            	<a id="1-{{save.url}}"href="#" ng-click="goButton = !goButton" class="list-group-item"  ng-repeat="save in lista.data.entities.saved">
+			            		{{save.label}}
+								<p ng-show="goButton"> <button type="button" class="btn btn-primary btn-xs">editar</button>  - <button type="button" class="btn btn-danger btn-xs">eliminar</button> 	</p>
+			            	</a>
+			          	</div>
+						<hr>
+					   	<div class="list-group" >
+			            	<a href="#" class="list-group-item active">Categoria</a>
+			            	<a href="index.html" class="list-group-item">Todos</a>
+			            	<a href="#{{categoria.label}}" class="list-group-item"  ng-repeat="categoria in lista.data.entities.categories[0]">{{categoria.label}}</a>         
+			         	</div>
+						<hr>
+			          <div class="list-group" >
+			            <a href="#" class="list-group-item active">Idioma</a>
+			            <a href="index.html" class="list-group-item">Todos</a>
+			            <a href="#" class="list-group-item"  ng-repeat="lenguaje in lista.data.entities.lang[0]">{{lenguaje.label}}</a>
+			          </div>
+			           <div class="list-group" >
+				            <a href="#" class="list-group-item active">Publicacion</a>
+				            <a href="#" class="list-group-item">Todos</a>
+				            <a href="#" class="list-group-item">Hoy</a>
+				            <a href="#" class="list-group-item">Hace una semana</a>
+				            <a href="#" class="list-group-item">Hace un mes</a>
+				            <a href="#" class="list-group-item">Hace un año</a>
+			          </div>
+			          <div class="list-group" >
+			            <a href="#" class="list-group-item active">Presentacion</a>
+			            <a href="index.html" class="list-group-item">Todos</a>
+			            <a href="#" class="list-group-item"  ng-repeat="edicion in lista.data.entities.edition[0]">{{edicion.label}}</a>
+			          </div>
+			        </div>
+			        
+
+			        <div ng-view>
+			        	
+			        </div>
+				</div>
+
+				<hr>
+
+				<footer>
+					<p>&copy; 2017 Company, Inc.</p>
+				</footer>
+			
+			</div>		 
+		</div>		
+	</body>
+</html>

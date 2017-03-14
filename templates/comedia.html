@@ -1,0 +1,10 @@
+<div class="col-xs-12 col-sm-9">
+	<div class="row">
+		
+		<div class="col-xs-6 col-md-4" style="height:450px;margin-bottom:20px" ng-repeat="pelis in lista.data.data | filter:q" ng-if="pelis.categories[0] === 'comedy'">
+			<img ng-src='{{pelis.image}}' alt="{{pelis.title}}"  title="{{pelis.title}}"/>
+			<h2>{{pelis.title}} - {{pelis.categories[0]}}</h2>
+			<p>	{{pelis.teaser}}</p>
+		</div>		
+	</div>
+</div>
